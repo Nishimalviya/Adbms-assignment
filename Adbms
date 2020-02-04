@@ -1,7 +1,50 @@
-craeting table location
+craeting table location--
 create table Location(Location_id int NOT NULL PRIMARY KEY , Regional_group varchar(30))
 insert into Location values(122,'NewYork')
 insert into Location values(123,'Dallas')
 insert into Location values(124,'Chicago')
 insert into Location values(167,'Boston')
 select *from Location
+
+creating table Department--
+create table Department(Department_id int Not Null Primary Key, 
+Name varchar(30), 
+Location_id int,  
+FOREIGN KEY (Location_id) REFERENCES Location(Location_id))
+insert into Department values(10,'Accountiing',122)
+insert into Department values(20,'Research',124)
+insert into Department values(30,'Sales',123)
+insert into Department values(40,'Operations',167)
+select *from Department
+
+creating table job--
+create table Job(Job_id int Not Null Primary Key,Function varchar(30))
+insert into Job values(667,'Clerk')
+insert into Job values(668,'Staff')
+insert into Job values(669,'Analyst')
+insert into Job values(670,'SalesPerson')
+insert into Job values(671,'Manager')
+insert into Job values(672,'President')
+select *from Job
+
+creating table Employee--
+create table Employee( 
+Employee_id int Not Null Primary key, 
+Last_name varchar(30), 
+First_name varchar(30), 
+Middle_name varchar(30), 
+Job_id int, 
+Manager_id int, 
+Hiredate date, 
+Salary int, 
+Comm int, 
+Department_id int, 
+foreign key(Department_id) references Department(Department_id), 
+foreign Key(Job_id) references Job(Job_id))
+insert into Employee values(7369,'Smith','Jhon','Q',667,7902,'17-Dec-84',800,Null,20)
+insert into Employee values(7499,'Allen','Kevin','J',670,7698,'20-Feb-85',1600,300,30)
+insert into Employee values(7505,'Doyle','Jean','K',671,7839,'04-Apr-85',2850,Null,30)
+insert into Employee values(7506,'Dennis','Lynn','S',671,7839,'15-May-85',2750,Null,30)
+insert into Employee values(7507,'Baker','Leslie','D',671,7839,'10-Jun-85',2200,Null,40)
+insert into Employee values(7521,'Wark','Cynthia','D',670,7698,'22-Feb-85',1250,500,30)
+select *from Employee
