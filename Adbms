@@ -1,0 +1,7 @@
+craeting table location
+create table Location(Location_id int NOT NULL PRIMARY KEY , Regional_group varchar(30))
+insert into Location values(122,'NewYork')
+insert into Location values(123,'Dallas')
+insert into Location values(124,'Chicago')
+insert into Location values(167,'Boston')
+select *from Location
