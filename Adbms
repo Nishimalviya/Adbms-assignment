@@ -57,9 +57,18 @@ rename column Employee_id to  ID_of_Employee;
 alter table Employee 
 rename column Last_name to  Name_of_Employee;
 
+
 alter table Employee 
 rename column Department_id  to DepartmentID;
+#################################################################
+Queries using where clause-
 
 Select *from Employee where Name_of_Employee='Smith';
 
+Select ID_of_Employee from Employee where DepartmentID=20;
 
+Select *from Employee where Salary Between 3000 and 4500;
+
+Select  ID_of_Employee from  Employee where DepartmentID=10 or DepartmentId= 20;
+
+Select  ID_of_Employee from  Employee where DepartmentID Not in (10,30);
