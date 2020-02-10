@@ -50,4 +50,14 @@ insert into Employee values(7521,'Wark','Cynthia','D',670,7698,'22-Feb-85',1250,
 select *from Employee
 ********
 select First_name,Last_name,Salary,Comm from Employee;
+select Employee_id,Last_name,Department_id from Employee;
+alter table Employee
+rename column Employee_id to  ID_of_Employee;
+
+alter table Employee 
+rename column Last_name to  Name_of_Employee;
+
+alter table Employee 
+rename column Department_id  to DepartmentID;
+
 
