@@ -1,4 +1,4 @@
-craeting table location--
+creating table location--
 create table Location(Location_id int NOT NULL PRIMARY KEY , Regional_group varchar(30))
 insert into Location values(122,'NewYork')
 insert into Location values(123,'Dallas')
@@ -48,3 +48,6 @@ insert into Employee values(7506,'Dennis','Lynn','S',671,7839,'15-May-85',2750,N
 insert into Employee values(7507,'Baker','Leslie','D',671,7839,'10-Jun-85',2200,Null,40)
 insert into Employee values(7521,'Wark','Cynthia','D',670,7698,'22-Feb-85',1250,500,30)
 select *from Employee
+********
+select First_name,Last_name,Salary,Comm from Employee;
+
