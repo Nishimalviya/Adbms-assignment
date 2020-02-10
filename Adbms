@@ -60,4 +60,6 @@ rename column Last_name to  Name_of_Employee;
 alter table Employee 
 rename column Department_id  to DepartmentID;
 
+Select *from Employee where Name_of_Employee='Smith';
+
 
