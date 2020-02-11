@@ -81,3 +81,10 @@ select *from Employee where Name_of_Employee like 'S___';
 
 select *from Employee where DepartmentId=10 and Salary>3500;
 
+select *from Employee where Comm is NULL;
+######################################################################
+Queries using Order by:
+
+select Id_of_Employee,Name_of_Employee from Employee order by Id_of_Employee Asc;
+
+select Id_of_Employee,Name_of_Employee from Employee order by Salary DESc;
