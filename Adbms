@@ -72,3 +72,5 @@ Select *from Employee where Salary Between 3000 and 4500;
 Select  ID_of_Employee from  Employee where DepartmentID=10 or DepartmentId= 20;
 
 Select  ID_of_Employee from  Employee where DepartmentID Not in (10,30);
+
+select * from Employee where Last_name like 'S%'; 
