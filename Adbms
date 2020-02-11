@@ -88,3 +88,7 @@ Queries using Order by:
 select Id_of_Employee,Name_of_Employee from Employee order by Id_of_Employee Asc;
 
 select Id_of_Employee,Name_of_Employee from Employee order by Salary DESc;
+
+select * from Employee order by Name_of_Employee Asc,Salary DESc;
+
+select * from Employee order by Name_of_Employee Asc,DepartmentId DESc;
