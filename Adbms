@@ -77,4 +77,7 @@ select *from Employee where Name_of_Employee like 'S%';
 
 select *from Employee where Name_of_Employee like 'S%h';
 
+select *from Employee where Name_of_Employee like 'S___';
+
+select *from Employee where DepartmentId=10 and Salary>3500;
 
