@@ -104,3 +104,7 @@ select min(Salary), max(Salary), avg(Salary) from employee  group by Job_id;
 select count(extract(month from Hiredate)) from employee group by extract(month from Hiredate);
 
 select DepartmentID,count(*) from Employee group by DepartmentID having count(*)>=4;
+
+SELECT Id_of_Employee,count(*) FROM Employee WHERE to_char(Hiredate, 'mon')='jan' group by Id_of_Employee;
+
+SELECT Id_of_Employee,count(*) FROM Employee WHERE to_char(Hiredate, 'mon')='jan' or to_char(Hiredate, 'mon')='Sep' group by Id_of_Employee;
