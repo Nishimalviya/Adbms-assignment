@@ -98,3 +98,5 @@ Queries using group by and having:
 select DepartmentID,count(*) from Employee group by DepartmentID;
 
 select min(Salary), max(Salary), avg(Salary) from employee  group by DepartmentID ; 
+
+select min(Salary), max(Salary), avg(Salary) from employee  group by Job_id; 
