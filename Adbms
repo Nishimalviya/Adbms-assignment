@@ -93,4 +93,6 @@ select * from Employee order by Name_of_Employee Asc,Salary DESc;
 
 select * from Employee order by Name_of_Employee Asc,DepartmentId DESc;
 ###########################################################################################
-Queries using group by and having
+Queries using group by and having:
+
+select DepartmentID,count(*) from Employee group by DepartmentID;
