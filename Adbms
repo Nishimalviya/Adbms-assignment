@@ -100,3 +100,5 @@ select DepartmentID,count(*) from Employee group by DepartmentID;
 select min(Salary), max(Salary), avg(Salary) from employee  group by DepartmentID ; 
 
 select min(Salary), max(Salary), avg(Salary) from employee  group by Job_id; 
+
+select count(extract(month from Hiredate)) from employee group by extract(month from Hiredate);
