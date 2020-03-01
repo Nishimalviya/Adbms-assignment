@@ -129,6 +129,14 @@ select Name_of_Employee from Employee where Job_ID = (select Job_ID from JOb whe
  DELETE FROM Employee WHERE DepartmentID=(select DepartmentID from Department where Name='Accounting');
  
  SELECT MAX(Salary) FROM Employee WHERE Salary NOT IN ( SELECT Max(Salary) FROM Employee); 
+ 
+ SELECT * FROM Employee e1 WHERE 3-1 = (SELECT COUNT(DISTINCT Salary) FROM Employee e2 WHERE e2.Salary > e1.Salary);
+ 
+ ###############sub queries using operator(ALL, ANY, SOME,EXISTS)s##############
+ SELECT * FROM Employee WHERE Salary > ALL (SELECT Salary FROM Employee WHERE DepartmentID=40);
+ 
+ SELECT * FROM Employee WHERE Salary < ALL (SELECT Salary FROM Employee WHERE DepartmentID=40);
+ 
 
 
 
