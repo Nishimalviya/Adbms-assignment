@@ -137,6 +137,16 @@ select Name_of_Employee from Employee where Job_ID = (select Job_ID from JOb whe
  
  SELECT * FROM Employee WHERE Salary < ALL (SELECT Salary FROM Employee WHERE DepartmentID=40);
  
+ SELECT D.NAME FROM Department D WHERE
+ NOT EXISTS (SELECT * FROM Employee E WHERE D.DepartmentID = E.DepartmentID);
+ 
+ ########corelated query##################################
+ 
+  SELECT DepartmentID, Salary, avg(Salary), count(*)
+    FROM Employee e
+    GROUP BY DepartmentID, Salary
+    HAVING Salary > (select avg(Salary) from Employee e2 where e2.DepartmentID=e.DepartmentID)
+ 
 
 
 
