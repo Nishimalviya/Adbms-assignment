@@ -113,7 +113,23 @@ select count(extract(month from Hiredate)) from employee where Hiredate between 
 
 SELECT DEpartmentID, COUNT(*) FROM Employee where Hiredate between '01-apr-85' and '28-apr-85' GROUP BY DepartmentID having count(*)=1;
 
+#############sub queries##############
 select Name_of_employee from Employee where Salary=(select max(Salary) from Employee);
+
+select Name_of_Employee from Employee where DepartmentID = (select DepartmentID from Department where Name='Sales') ; 
+
+select Name_of_Employee from Employee where Job_ID = (select Job_ID from JOb where Function='Clerk') ; 
+
+ select Name_of_Employee from Employee where DepartmentID =(select DepartmentID from Department where Location_id=124); 
+ 
+ select count(*) from Employee where DepartmentID = (select DepartmentID from Department where Name='Sales');
+ 
+ UPDATE Employee set Salary= Salary + (Salary * 10 / 100) where Job_ID = (select Job_ID from Job where function='Clerk');
+ 
+ DELETE FROM Employee WHERE DepartmentID=(select DepartmentID from Department where Name='Accounting');
+ 
+ SELECT MAX(Salary) FROM Employee WHERE Salary NOT IN ( SELECT Max(Salary) FROM Employee); 
+
 
 
 
