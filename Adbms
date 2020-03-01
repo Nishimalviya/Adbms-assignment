@@ -108,3 +108,18 @@ select DepartmentID,count(*) from Employee group by DepartmentID having count(*)
 SELECT Id_of_Employee,count(*) FROM Employee WHERE to_char(Hiredate, 'mon')='jan' group by Id_of_Employee;
 
 SELECT Id_of_Employee,count(*) FROM Employee WHERE to_char(Hiredate, 'mon')='jan' or to_char(Hiredate, 'mon')='Sep' group by Id_of_Employee;
+
+select count(extract(month from Hiredate)) from employee where Hiredate between '01-jan-85' and '31-dec-85' group by extract(month from Hiredate);
+
+SELECT DEpartmentID, COUNT(*) FROM Employee where Hiredate between '01-apr-85' and '28-apr-85' GROUP BY DepartmentID having count(*)=1;
+
+select Name_of_employee from Employee where Salary=(select max(Salary) from Employee);
+
+
+
+
+
+
+
+
+
